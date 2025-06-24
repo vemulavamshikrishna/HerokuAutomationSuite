@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="2" name="Test" parallel = "classes">
+   <parameter name = "browser" value = "Edge" />
+   <parameter name = "url" value = "https://the-internet.herokuapp.com" />
+    <classes>
+      <!--<class name="tests.JQueyUIMenusTest"/>
+      <class name="tests.WYSIWYGEditorTest"/>
+      <class name="tests.EntryAdTest"/>
+      <class name="tests.Test_BaseTest"/>
+      <class name="tests.DragAndDropTest"/>
+      <class name="tests.AddRemoveElementsTest"/>-->
+      <class name="tests.DynamicLoadingTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <listeners>
+     <listener class-name= "listeners.ScreenshotOnTestCaseFailureListener" />
+     <listener class-name= "listeners.RetryAnalyser"/>
+     <!--<listener class-name= "listeners.RerunningTheFailedTestCase"/> we can't use the direct retryanalyser class
+     as it not comes under ITestListener interface-->
+   </listeners>
+</suite> <!-- Suite -->
