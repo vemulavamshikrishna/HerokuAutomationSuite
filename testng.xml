@@ -5,12 +5,12 @@
    <parameter name = "browser" value = "Edge" />
    <parameter name = "url" value = "https://the-internet.herokuapp.com" />
     <classes>
-      <!--<class name="tests.JQueyUIMenusTest"/>
+      <!--<<class name="tests.AddRemoveElementsTest"/>-->
+      <class name="tests.JQueyUIMenusTest"/>
       <class name="tests.WYSIWYGEditorTest"/>
       <class name="tests.EntryAdTest"/>
       <class name="tests.Test_BaseTest"/>
       <class name="tests.DragAndDropTest"/>
-      <class name="tests.AddRemoveElementsTest"/>-->
       <class name="tests.DynamicLoadingTest"/>
     </classes>
   </test> <!-- Test -->
