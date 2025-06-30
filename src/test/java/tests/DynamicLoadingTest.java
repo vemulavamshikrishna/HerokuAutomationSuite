@@ -14,7 +14,7 @@ import pages.HomePage;
 
 public class DynamicLoadingTest extends BaseTest {
 	WebDriver driver;
-	
+
 	@Test
 	public void testDynamicTest() {
 		driver = DriverManager.getDriver();

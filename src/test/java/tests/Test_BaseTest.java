@@ -8,13 +8,13 @@ import base.DriverManager;
 
 public class Test_BaseTest extends BaseTest{
 	WebDriver driver;
-	
+
 	@Test
 	public void test() {
-		
+
 		driver = DriverManager.getDriver();
 		System.out.println(driver.getTitle());
-		
+
 	}
 
 }

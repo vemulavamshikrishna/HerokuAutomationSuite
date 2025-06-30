@@ -11,9 +11,9 @@ import pages.DragAndDropPage;
 import pages.HomePage;
 
 public class DragAndDropTest extends BaseTest {
-	
+
 	WebDriver driver;
-	
+
 	@Test
 	void dragNDropTest() {
 		driver = DriverManager.getDriver();

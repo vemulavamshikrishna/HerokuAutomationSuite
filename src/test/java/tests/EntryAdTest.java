@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 import base.DriverManager;
-import listeners.RerunningTheFailedTestCase;
 import listeners.ScreenshotOnTestCaseFailureListener;
 import pages.EntryAdPage;
 import pages.HomePage;
@@ -18,7 +17,7 @@ import pages.HomePage;
 @Listeners(ScreenshotOnTestCaseFailureListener.class)
 public class EntryAdTest extends BaseTest {
 	WebDriver driver;
-	
+
 	@Test(retryAnalyzer = listeners.RerunningTheFailedTestCase.class)
 	public void testEntryAd() {
 		driver = DriverManager.getDriver();

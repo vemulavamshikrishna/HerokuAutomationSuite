@@ -15,8 +15,8 @@ import pages.JQueryUIMenusPage;
 @Listeners(ExtentReportLogs.class)
 public class JQueyUIMenusTest extends BaseTest{
 	WebDriver driver;
-	//BaseTest bt = BaseTest.getInstance();	
-	
+	//BaseTest bt = BaseTest.getInstance();
+
 	@Test
 	public void test() {
 		//bt.setUp("Chrome", "https://the-internet.herokuapp.com");

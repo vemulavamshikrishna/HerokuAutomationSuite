@@ -19,7 +19,7 @@ import utils.BrowserUtils;
 public class AddRemoveElementsTest extends BaseTest{
 	WebDriver driver;
 	//BaseTest bt = BaseTest.getInstance();
-	
+
 	@Test//(invocationCount = 2)
 	public void test() {
 		driver = DriverManager.getDriver();
@@ -38,5 +38,5 @@ public class AddRemoveElementsTest extends BaseTest{
 		}
 		navigateBack();
 	}
-	
+
 }

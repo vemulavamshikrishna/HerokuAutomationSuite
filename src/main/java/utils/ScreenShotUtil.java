@@ -8,9 +8,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class ScreenShotUtil {
-	
+
 	public static String triggerScreenShot(WebDriver driver, String screenshotName) {
-		
+
 		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
 		File srcFile = takeScreenShot.getScreenshotAs(OutputType.FILE);
 		String path = "./target/"+screenshotName+".png";
@@ -22,7 +22,7 @@ public class ScreenShotUtil {
 			e.printStackTrace();
 		}
 		return path;
-		
+
 	}
 
 }

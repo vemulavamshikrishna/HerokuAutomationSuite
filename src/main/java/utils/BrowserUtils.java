@@ -24,22 +24,22 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BrowserUtils {
-	
+
 	public static boolean isPageReady(WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		return js.executeScript("return document.readyState").equals("complete");
 	}
-	
+
 	public static void explicitWaitForVisibilityOfElement(WebElement element, WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	public static Boolean explicitWait(Function<WebDriver , Boolean> condition, WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		return wait.until(condition);
 	}
-	
+
 	public static Boolean fluentWaitForVisibilityOfElement(final WebElement element, WebDriver driver, int timeout, int pollingInterval) {
 		Wait<WebDriver> wait = new FluentWait<>(driver)
 				.withTimeout(Duration.ofSeconds(timeout))
@@ -57,7 +57,7 @@ public class BrowserUtils {
 			}
 		});
 	}
-	
+
 	public static Boolean fluentWait(Function<WebDriver , Boolean> condition, WebDriver driver, int timeout, int pollingInterval) {
 		Wait<WebDriver> wait = new FluentWait<>(driver)
 				.withTimeout(Duration.ofSeconds(timeout))
@@ -65,7 +65,7 @@ public class BrowserUtils {
 				.ignoring(NoSuchElementException.class);
 		return wait.until(condition);
 	}
-	
+
 	public static void switchToNextWindow(WebDriver driver) {
 		String currentWindow = driver.getWindowHandle();
 		Set<String> windows = driver.getWindowHandles();
@@ -75,11 +75,11 @@ public class BrowserUtils {
 			}
 		}
 	}
-	
+
 	public static void switchToCurrentWindow(WebDriver driver) {
 		driver.switchTo().defaultContent();
 	}
-	
+
 	public static int checkStatusCode(String url) throws Exception {
 		disableSSLCertificateChecking();
 		URL locUrl = new URL(url);
@@ -88,7 +88,7 @@ public class BrowserUtils {
 		connection.connect();
 		return connection.getResponseCode();
 	}
-	
+
 	public static void disableSSLCertificateChecking() throws Exception {
 	    TrustManager[] trustAllCerts = new TrustManager[]{
 	        new X509TrustManager() {

@@ -9,7 +9,7 @@ import pages.HomePage;
 import pages.WYSIWYGEditorPage;
 
 public class WYSIWYGEditorTest extends BaseTest{
-	
+
 	WebDriver driver;
 	@Test
 	public void test() {
@@ -20,6 +20,6 @@ public class WYSIWYGEditorTest extends BaseTest{
 		wp.enterTextinTextarea("The new age is coming, everyone has to learn continuosly no matter to what to survive");
 		System.out.println(wp.getTextfromTextarea());
 	}
-	
+
 
 }

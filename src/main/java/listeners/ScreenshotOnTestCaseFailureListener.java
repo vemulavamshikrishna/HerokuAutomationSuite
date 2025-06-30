@@ -8,7 +8,7 @@ import base.BaseTest;
 import utils.ScreenShotUtil;
 
 public class ScreenshotOnTestCaseFailureListener implements ITestListener {
-	
+
 	@Override
 	public void onTestFailure(ITestResult result) {
 		BaseTest testClass = (BaseTest)result.getInstance();

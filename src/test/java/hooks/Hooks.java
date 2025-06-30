@@ -14,10 +14,10 @@ public class Hooks {
 	WebDriver driver;
 	String browserName = System.getProperty("browser","Edge");
 	String url = System.getProperty("url","https://the-internet.herokuapp.com");
-	
+
 	@Before
 	public void setUp() {
-		
+
 		switch(browserName) {
 		case("Chrome"):
 			System.setProperty("webdriver.chrome.driver","./BrowserWebDrivers/chromedriver.exe");
@@ -33,20 +33,20 @@ public class Hooks {
 			System.setProperty("webdriver.chrome.driver","./BrowserWebDrivers/chromedriver.exe");
 		    driver = new ChromeDriver();
 		    driver.get(url);
-		    break;			
+		    break;
 		}
-		
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		DriverManager.setDriver(driver);
-		
+
 	}
-	
+
 	@After
     public void tearDown() {
-		
+
 		DriverManager.quitDriver();
-		
+
 	}
 
 }
